@@ -1,0 +1,44 @@
+{
+
+"name":"jetioli/fichacatalograficadompdf",
+
+"description": "Gerenciador de Ficha Catalografica",
+
+"minimum-stability": "stable",
+
+"license": "MIT",
+"authors": [
+    {
+      "name": "Jefferson Oliveira",
+      "email": "jetioli@gmail.com"
+    }
+],
+"config": {"vendor-dir": "vendor"},
+ "autoload": {
+     "psr-4": {"Source\\":"source/"},
+     "files": [
+         "source/Config.php"
+     ]
+
+ },
+
+ "require": {
+
+    "dompdf/dompdf": "1.1.*"
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
