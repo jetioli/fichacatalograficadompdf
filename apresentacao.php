@@ -14,9 +14,6 @@ $sobrenomeorientador = $_POST ["sobrenomeorientador"];
 $nomeorientador = $_POST ["nomeorientador"]; 
 $tipo = $_POST ["tipo"]; 
 $titulacao = $_POST ["titulacao"];
-$ProjetoDeIntervencao = $_POST ["Projeto de Intervencao"]; 
-$ArtigoCientifico = $_POST ["Artigo Cientifico"]; 
-$GuiaCurricular = $_POST ["Guia Curricular"];
 $palavra1 = $_POST ["palavra1"]; 
 $palavra2 = $_POST ["palavra2"]; 
 $palavra3 = $_POST ["palavra3"]; 
@@ -29,33 +26,33 @@ $palavra5 = $_POST ["palavra5"];
 function Palavras($palavra1,$palavra2,$palavra3,$palavra4,$palavra5) {
    
       if (($palavra1 != NULL) and ($palavra2 != NULL) and ($palavra3 != NULL) and ($palavra4 != NULL)and ($palavra5 != NULL)) {
-          $um = '1.'. $palavra1.'.';
-          $dois = '2.'. $palavra2.'.';
-          $tres = '3.' . $palavra3.'.';
-          $quatro = '4.'. $palavra4.'.';
-          $cinco = '5.'. $palavra5.'.';
+          $um = ' 1. '. $palavra1.'.';
+          $dois = ' 2. '. $palavra2.'.';
+          $tres = ' 3. ' . $palavra3.'.';
+          $quatro = ' 4. '. $palavra4.'.';
+          $cinco = ' 5. '. $palavra5.'.';
           return $um .$dois .$tres .$quatro .$cinco;
     
       }
   
   elseif (($palavra1 != NULL) and ($palavra2 != NULL) and ($palavra3 != NULL) and ($palavra4 != NULL)) {
-      $um = '1.'. $palavra1;
-      $dois = '2.'. $palavra2;
-      $tres = '3.' . $palavra3;
-      $quatro = '4.'. $palavra4;
+      $um = ' 1. '. $palavra1;
+      $dois = ' 2. '. $palavra2;
+      $tres = ' 3. ' . $palavra3;
+      $quatro = ' 4. '. $palavra4;
       return $um. $dois. $tres. $quatro;
     }
   
   elseif (($palavra1 != NULL) and ($palavra2 != NULL) and ($palavra3 != NULL)) {
-      $um = '1.'. $palavra1;
-      $dois = '2.'. $palavra2;
-      $tres = '3.' . $palavra3;
+      $um = ' 1. '. $palavra1;
+      $dois = ' 2. '. $palavra2;
+      $tres = ' 3. ' . $palavra3;
       return $um. $dois. $tres;
     }
   
   elseif (($palavra1 != NULL) and ($palavra2 != NULL)) {
-      $um = '1.'. $palavra1;
-      $dois = '2.'. $palavra2;
+      $um = ' 1. '. $palavra1;
+      $dois = ' 2. '. $palavra2;
       
       return $um. $dois;
   
@@ -64,7 +61,7 @@ function Palavras($palavra1,$palavra2,$palavra3,$palavra4,$palavra5) {
   
   elseif ($palavra1 != NULL) {
   
-     $um = '1.'. $palavra1;
+     $um = ' 1. '. $palavra1;
      return $um;
     }
     
@@ -83,7 +80,7 @@ $palavras = Palavras($palavra1,$palavra2,$palavra3,$palavra4,$palavra5);
 
 
 <head>
-Ficha Catalográfica
+Ficha Catalográfica gerada automaticamente.
 </head>
 
 
@@ -109,14 +106,14 @@ Ficha Catalográfica
    echo 
   
    ("$sobrenome, $nome. <br/> 
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;$titulo. /$nome $sobrenome. - Belo Horizonte: ESP-MG, $ano.<br/>
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;$pagina f. <br/>
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;Orientador(a):$nomeorientador $sobrenomeorientador.<br/>
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;$tipo (Especialização) em $titulacao.<br/>
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;Inclui bibliografia.<br/>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$titulo. /$nome $sobrenome. - Belo Horizonte: ESP-MG, $ano.<br/>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$pagina f. <br/>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Orientador(a):$nomeorientador $sobrenomeorientador.<br/>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$tipo (Especialização) em $titulacao.<br/>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inclui bibliografia.<br/>
    
      
-   <p>&nbsp;&nbsp;&nbsp;&nbsp;$palavras. I. $sobrenomeorientador, $nomeorientador. II. Escola de Saúde Pública do Estado de Minas Gerais. III. Título");
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $palavras. I. $sobrenomeorientador, $nomeorientador. II. Escola de Saúde Pública do Estado de Minas Gerais. III. Título");
      
 
     
